@@ -13,6 +13,8 @@ with tf.Session() as sess:
     result = sess.run(node3)
     print(result) #OUTPUT : 7.0
     print(type(result)) #OUTPUT : <class 'numpy.float32'>
+    writer = tf.summary.FileWriter("C:\PYCHARM\TMP")
+    writer.add_graph(sess.graph)
 
 #Graph here produce always constant output as it takes always constant as input
 #Next we can see for plceholder
